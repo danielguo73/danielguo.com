@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Guo</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 30px 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 150px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .title-description {
+            font-size: 1.2em;
+            margin-top: 10px;
+            margin-left: -50px;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 60%;
+            object-fit: cover;
+            object-position: center;
+            margin-left: 350px;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin: 20px 0;
+            background-color: #333;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        section:hover {
+            background-color: #444;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.0em;
+            max-width: 600px;
+            margin-right: 90px;
+        }
+
+        .slideshow-container {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: #fff;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Experience Section */
+        #experience {
+            padding: 60px 20px;
+            margin: 20px 0;
+            background-color: #333;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #experience h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .experience-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .experience-details {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .experience-details h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .experience-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .experience-details li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="title-container">
+            <h1>Daniel Guo</h1>
+            <p class="title-description">Data Science Student | University of Ottawa</p>
+        </div>
+        <img src="profile.jpg" alt="Daniel Guo" class="profile-img">
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img src="grandcanyon2.JPG" alt="Grand Canyon" style="width:100%">
+                    <div class="caption">Grand Canyon, Arizona</div>
+                </div>
+                <div class="slides">
+                    <img src="nyc.jpg" alt="New York City" style="width:100%">
+                    <div class="caption">New York City</div>
+                </div>
+                <div class="slides">
+                    <img src="utah.JPG" alt="Utah" style="width:100%">
+                    <div class="caption">Angel's Landing, Utah</div>
+                </div>
+
+                <div class="slides">
+                    <img src="hollywood.JPG" alt="hollywood" style="width:100%">
+                    <div class="caption">Hollywood, California</div>
+                </div>
+
+                <div class="slides">
+                    <img src="vegas.jpg" alt="Las Vegas" style="width:100%">
+                    <div class="caption">Las Vegas, Nevada</div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="about-text">
+                <p>I am currently majoring in Data Science at the University of Ottawa, which is a double degree program in Computer Science and Mathematics. 
+                    My academic journey allows me to explore the depths of technology, data, and mathematical theory while honing my problem-solving skills. 
+                    I have a passion for innovation and engineering, always seeking new ways to apply my knowledge to real-world challenges. 
+                </p>
+                <p>In my free time, I love traveling and exploring new places—it’s a huge source of inspiration for me. Music has also been a big part of my life since I’ve been playing piano for over 10 years. 
+                I grew up playing soccer, which taught me a lot about teamwork and discipline, and currently, I enjoy playing volleyball.
+                I also enjoy trying out new recipes since cooking is another one of my passions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-content">
+            <div class="experience-details">
+                <h3>Ericsson | Cloud RAN Integration Intern</h3>
+                <ul>
+                    <li>Conduct data analysis and visualization to support Cloud RAN integration projects.</li>
+                    <li>Utilize advanced data science techniques such as ARIMA and regression to extract insights and drive decision-making.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Click below to view and/or download my resume:</p>
+        <a href="Daniel Resume 2025-1.pdf" target="_blank">View/Download Resume</a>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/daniel-guo1/" target="_blank">LinkedIn</a>.</p>
+    </section>
+    
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Show the current slide
+            slides[slideIndex].style.display = "block";
+        }
+
+        function moveSlide(offset) {
+            slideIndex += offset;
+
+            if (slideIndex >= document.getElementsByClassName("slides").length) {
+                slideIndex = 0;  // Cycle back to the first slide
+            } else if (slideIndex < 0) {
+                slideIndex = document.getElementsByClassName("slides").length - 1; // Go to the last slide
+            }
+
+            showSlides();
+        }
+
+        // Initialize slideshow
+        showSlides();
+    </script>
+</body>
+</html>
